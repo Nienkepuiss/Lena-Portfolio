@@ -15,6 +15,28 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop;
 });
 
+// MOBILE MENU
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector(".nav");
+  
+    menuToggle.addEventListener("click", () => {
+      const isVisible = nav.getAttribute("data-visible") === "true";
+  
+      // Basculer la visibilité du menu
+      nav.setAttribute("data-visible", !isVisible);
+  
+      // Ajouter ou retirer la classe de rotation
+      if (isVisible) {
+        menuToggle.classList.remove("rotated");
+      } else {
+        menuToggle.classList.add("rotated");
+      }
+    });
+  });
+  
+
 // SMOOTH BANNER EFFECT
 
 document.addEventListener('DOMContentLoaded', function() {
