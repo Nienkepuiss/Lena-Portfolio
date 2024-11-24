@@ -1,8 +1,4 @@
 @font-face {
-    font-family: 'Sugar';
-    src: url(Fonts/Sugar\ Magic.otf);
-}
-@font-face {
     font-family: 'Seasons';
     src: url(Fonts/Fontspring-DEMO-theseasons-bd.otf);
 }
@@ -154,6 +150,19 @@ p{
         font-size: 14px;
     }
 }
+
+@media (max-width: 575px){
+    .banner-content h1{
+        font-size: 45px;
+    }
+    .banner-text{
+        font-size: 12px;
+    }
+    .presta-btn{
+        margin-top: 15px;
+        font-size: 12px;
+    }
+}
 /* SCROLL BANNER */
 
 .scroll-banner{
@@ -180,6 +189,15 @@ p{
     }
     .scroll-banner p{
         font-size: 18px;
+    }
+}
+@media (max-width: 575px){
+    .scroll-banner-img{
+        width: 40px;
+        height: 40px;
+    }
+    .scroll-banner p{
+        font-size: 16px;
     }
 }
 /* ABOUT */
@@ -279,9 +297,10 @@ p{
     .about-card{
         height: 400px;
         width: 50%;
-    }
+    } 
+}
     
-    @media (max-width: 768px){
+@media (max-width: 768px){
         .about-title h2{
             font-size: 28px;
         }
@@ -298,8 +317,15 @@ p{
         .about-card-hover p{
             font-size: 20px;
         }
+}
+
+@media (max-width: 575px){
+    .about-title h2{
+        font-size: 24px;
     }
-    
+    .about-card{
+        width: 70%;
+    }
 }
 
 /* SERVICES */
@@ -418,6 +444,18 @@ p{
     }
 }
 
+@media (max-width: 575px){
+    .prestations-title h2{
+        font-size: 24px;
+    }
+    .prestations-section{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+        gap: 30px;
+        width: 80%;
+    }
+}
+
 /* BIENFAITS */
 
 #bienfaits{
@@ -493,7 +531,37 @@ p{
     .icon-bienfaits{
         width: 35px;
     }
-
+}
+@media (max-width: 768px){
+    #bienfaits h2{
+        font-size: 28px;
+    }
+    .bienfaits-card{
+        width: 70%;
+    }
+    .bienfaits-title h3{
+        font-size: 22px;
+    }
+}
+@media (max-width: 575px){
+    #bienfaits h2{
+        font-size: 24px;
+    }
+    .bienfaits-container{
+        gap: 20px;
+    }
+    .bienfaits-card{
+        width: 80%;
+    }
+    .bienfaits-title h3{
+        font-size: 20px;
+    }
+    .bienfaits-card p{
+        font-size: 16px;
+    }
+    .bienfaits-btn{
+        font-size: 16px;
+    }
 }
 
 /* WORK */
@@ -546,6 +614,26 @@ p{
     .gallery-container{
         flex-direction: column;
         width: 60%;
+    }
+}
+@media (max-width: 768px){
+    #work{
+        gap: 30px;
+    }
+    .work-title h2{
+        font-size: 28px;
+        align-self: center;
+    }
+    .gallery-container{
+        width: 70%;
+    }
+}
+@media (max-width: 575px){
+    .work-title h2{
+        font-size: 24px;
+    }
+    .gallery-container{
+        width: 80%;
     }
 }
 /* CONTACT */

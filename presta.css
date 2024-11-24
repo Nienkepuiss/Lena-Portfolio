@@ -17,9 +17,9 @@
     justify-content: center;
 }
 #banner-services h1{
-    font-family: 'Sugar';
+    font-family: 'Seasons';
     font-size: 60px;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 .prestations{
     background-color: var(--primary-color);
