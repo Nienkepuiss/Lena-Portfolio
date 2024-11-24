@@ -65,7 +65,7 @@ p{
 @media (max-width: 768px) {
     #menu-toggle {
         display: block;
-        background: none;
+        background: var(--p-color);
         border: none;
         cursor: pointer;
         position: relative;
@@ -80,7 +80,10 @@ p{
         margin: 5px 0;
         transition: transform 0.3s ease, opacity 0.3s ease;
       }
-      
+      .nav-link:hover{
+        border-bottom: none;
+        width: 100%;
+      }
       /* Effet croix */
       #menu-toggle.rotated .bar:nth-child(1) {
         transform: rotate(45deg) translateY(11px);
