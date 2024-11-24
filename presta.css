@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #f5ece2;
+    --secondary-color: #a89988;
+    --text-color: #4c3a32;
+    --p-color: #8d6b54;
+    --background-color: #d7c3b5;
+}  
+
+
+#banner-services{
+    height: 60vh;
+    background-image: url(img/banner-services.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#banner-services h1{
+    font-family: 'Sugar';
+    font-size: 60px;
+    color: var(--text-color);
+}
+.prestations{
+    background-color: var(--primary-color);
+    padding: 80px 0 80px 0;
+    gap: 50px;
+}
+.btn-tarifs{
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--background-color);
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    border: 1px solid var(--primary-color);
+    border-radius: 16px;
+    margin-top: 30px;
+    padding: 6px 18px 6px 18px;
+    box-shadow: inset 0 0 0 0 var(--background-color);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.btn-tarifs:hover{
+    color: var(--text-color);
+    box-shadow: inset 200px 0 0 0 var(--background-color);
+}
+
+
+/* PRESTATION CARDS */
+
+.presta-container{
+    gap: 30px;
+    width: 85%;
+}
+.service-card{
+    width: 100%;
+    border: 1px solid var(--text-color);
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.5s ease, transform 0.8s ease;
+}
+.service-card.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.title-container{
+    gap: 20px;
+}
+.title-container h3{
+    color: var(--text-color);
+}
+.service-img{
+    width: 40%;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+}
+.service-img2{
+    width: 40%;
+    border-radius: 0 8px 8px 0;
+    object-fit: cover;
+}
+.service-content{
+    width: 60%;
+    padding: 20px 20px 0 20px;
+    border-left: 1px solid var(--text-color);
+}
+.service-contentLeft{
+    width: 60%;
+    padding: 20px 20px 0 20px;
+    border-right: 1px solid var(--text-color);
+}
+.service-content p, .service-contentLeft p{
+    font-size: 18px;
+    color: var(--text-color);
+}
+.service-tarif{
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 15px;
+}
+.contact-btn{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins';
+    font-size: 16px;
+    border: 1px solid var(--p-color);
+    border-radius: 16px;
+    padding: 5px 15px 5px 15px;
+    box-shadow: inset 0 0 0 0 var(--p-color);
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.contact-btn:hover{
+    color: var(--primary-color);
+    box-shadow: inset 200px 0 0 0 var(--p-color);
+}
+
+/* FORMULES */
+
+.formules{
+    background-color: #ebded4;
+    justify-content: center;
+}
+.formules-container{
+    width: 60%;
+    background-color: #d1a784;
+    padding: 30px;
+    gap: 30px;
+    flex-direction: column;
+}
+.formule p{
+    margin-bottom: 0;
+    font-size: 20px;
+}
