@@ -1,7 +1,7 @@
 // HEADER EFFECT
 
 let lastScrollTop = 0;
-const header = document.querySelector('#header .menu');
+const header = document.querySelector('#header1 .menu');
 
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -19,22 +19,39 @@ window.addEventListener('scroll', function() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
-    const nav = document.querySelector(".nav");
+    const navMenu = document.querySelector(".menu ul.nav");
   
-    menuToggle.addEventListener("click", () => {
-      const isVisible = nav.getAttribute("data-visible") === "true";
+    // Gestion du menu toggle
+    menuToggle.addEventListener("click", function () {
+      menuToggle.classList.toggle("rotate"); // Ajoute l'effet de rotation
+      navMenu.classList.toggle("show"); // Affiche ou masque le menu
+    });
   
-      // Basculer la visibilité du menu
-      nav.setAttribute("data-visible", !isVisible);
+    // Fermer le menu lorsqu'un lien est cliqué
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        menuToggle.classList.remove("rotate");
+        navMenu.classList.remove("show");
+      });
+    });
   
-      // Ajouter ou retirer la classe de rotation
-      if (isVisible) {
-        menuToggle.classList.remove("rotated");
+    // Ajouter la classe "active" en fonction de la page actuelle
+    const currentPath = window.location.pathname; // Chemin de l'URL actuelle
+    const currentHash = window.location.hash; // Hash de l'URL (ex: #contact)
+  
+    navLinks.forEach((link) => {
+      // Vérifie si le href du lien correspond au chemin ou au hash actuel
+      if (
+        link.getAttribute("href") === currentPath || // Chemin exact
+        link.getAttribute("href") === currentHash // Hash exact
+      ) {
+        link.classList.add("active");
       } else {
-        menuToggle.classList.add("rotated");
+        link.classList.remove("active");
       }
     });
-  });
+});
   
 
 // SMOOTH BANNER EFFECT

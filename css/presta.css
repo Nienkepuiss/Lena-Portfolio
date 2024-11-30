@@ -5,11 +5,9 @@
     --p-color: #8d6b54;
     --background-color: #d7c3b5;
 }  
-
-
 #banner-services{
     height: 60vh;
-    background-image: url(img/banner-services.jpg);
+    background-image: url(../img/banner-services.jpg);
     background-size: cover;
     display: flex;
     flex-direction: column;
