@@ -240,7 +240,7 @@ p{
 
 .scroll-banner{
     background-color: var(--background-color);
-    padding: 5px 10px 5px 10px;
+    padding: 10px;
 }
 .scroll-banner-img, .scroll-banner-img1{
     width: 70px;
@@ -568,6 +568,7 @@ p{
 }
 .bienfaits-title{
     gap: 10px;
+    margin-bottom: 10px;
 }
 .bienfaits-card{
     width: 30%;
@@ -785,6 +786,10 @@ p{
     font-size: 18px;
     color: var(--primary-color);
     text-decoration: none;
+}
+.info-text a:hover, .socials a:hover{
+    color: var(--text-color);
+    transform: scale(1.1);
 }
 .tournees{
     color: var(--primary-color);
