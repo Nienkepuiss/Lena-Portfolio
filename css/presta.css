@@ -185,4 +185,18 @@
         background-color: transparent;
         color: var(--p-color);
     }
+    .title-container h3{
+        font-size: 20px;
+    }
+    .service-content p, .service-contentLeft p{
+        font-size: 15px;
+        text-align: justify;
+        margin-bottom: 0;
+    }
+    .service-details{
+        margin-bottom: 20px;
+    }
+    .service-tarif{
+        padding: 10px;
+    }
 }

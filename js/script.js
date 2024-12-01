@@ -26,21 +26,32 @@ loadHTML("#footer", "partials/footer.html");
 function initHeaderEffects() {
     let lastScrollTop = 0;
     const header = document.querySelector('#header1 .menu'); // Assurez-vous que ce sélecteur existe dans votre HTML
+    const delta = 10; // Seuil minimum pour déclencher les changements
 
     if (!header) return; // Si le header n'existe pas encore, quittez la fonction
 
     window.addEventListener('scroll', function () {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll Down
-            header.style.top = '-80px'; 
-        } else {
-            // Scroll Up
+
+        // Vérifiez si le défilement a dépassé le seuil
+        if (Math.abs(scrollTop - lastScrollTop) > delta) {
+            if (scrollTop > lastScrollTop) {
+                // Scroll vers le bas
+                header.style.top = '-80px';
+            } else {
+                // Scroll vers le haut
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
+        }
+
+        // Assurez-vous que le menu est toujours visible en haut de la page
+        if (scrollTop === 0) {
             header.style.top = '0';
         }
-        lastScrollTop = scrollTop;
     });
 }
+
 
 // MOBILE MENU
 function initMobileMenu() {
