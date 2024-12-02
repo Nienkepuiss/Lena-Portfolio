@@ -28,7 +28,6 @@
     text-decoration: none;
     background-color: var(--background-color);
     color: var(--p-color);
-    font-family: 'Poppins';
     font-style: italic;
     font-weight: 500;
     font-size: 18px;
@@ -108,7 +107,6 @@
     text-decoration: none;
     background-color: var(--p-color);
     color: var(--primary-color);
-    font-family: 'Poppins';
     font-size: 16px;
     border: 1px solid var(--text-color);
     border-radius: 16px;

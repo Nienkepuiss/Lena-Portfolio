@@ -3,6 +3,8 @@
     src: url(../Fonts/Fontspring-DEMO-theseasons-bd.otf);
 }
 
+
+
 :root {
     --primary-color: #f5ece2;
     --secondary-color: #a89988;
@@ -25,13 +27,17 @@ body {
     overflow-x: hidden;
     padding: 0;
 }
-h2, h3{
-    font-family: 'Lora';
+h2{
+    font-family: 'Radley';
+}
+h3{
+    font-family: 'Radley';
     font-weight: 600;
+    font-style: italic;
     margin-bottom: 0;
 }
 p{
-    font-family: 'Poppins';
+    font-family: 'Carlito';
 }
 
 /* HEADER*/
@@ -60,7 +66,7 @@ p{
     text-decoration: none;
     color: var(--text-color);
     font-size: 16px;
-    font-family: 'Poppins';
+    font-family: 'Carlito';
 }
 .nav-link:hover {
     color: var(--p-color); 
@@ -177,6 +183,10 @@ p{
     font-size: 18px;
     color: var(--primary-color);
     font-weight: 600;
+
+}
+.banner-text p{
+    font-family: 'Radley'
 }
 .presta-btn{
     text-decoration: none;
@@ -249,7 +259,7 @@ p{
 .scroll-banner p{
     color: var(--text-color);
     font-size: 20px;
-    font-family: 'Lora' !important;
+    font-family: 'Radley' !important;
     font-style: italic;
     font-weight: bold;
     margin-bottom: 0;
@@ -577,7 +587,6 @@ p{
     width: 50px;
 }
 .bienfaits-title h3{
-    font-family: 'Poppins';
     color: var(--p-color);
     font-size: 25px;
     font-weight: 600;
