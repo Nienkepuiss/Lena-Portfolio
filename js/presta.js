@@ -18,3 +18,41 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(card);
     });
 });
+
+
+// FONCTIONS POUR OUVRIR ET FERMER LA MODALE
+function toggleModale(modaleId, isOpen) {
+    const modale = document.getElementById(modaleId);
+    modale.style.display = isOpen ? 'flex' : 'none';
+    modale.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+  }
+  
+  // AJOUT DES ÉCOUTEURS POUR OUVRIR LA MODALE
+  document.querySelectorAll('.btn-tarifs').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const modaleId = this.getAttribute('href').substring(1);
+      toggleModale(modaleId, true);
+    });
+  });
+  
+  // AJOUT DES ÉCOUTEURS POUR FERMER LA MODALE
+  document.querySelectorAll('#close-modale').forEach(button => {
+    button.addEventListener('click', function () {
+      const modale = this.closest('aside'); // Trouve l'élément parent <aside>
+      toggleModale(modale.id, false);
+    });
+  });
+  
+  // AJOUT D'UN EFFET DE CLIC SUR LES BOUTONS (OPTIONNEL)
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.btn-primary').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.stopPropagation();
+        button.classList.add('clicked');
+      });
+    });
+  });
+  
+
+  
