@@ -29,6 +29,7 @@ body {
 }
 h2{
     font-family: 'Radley';
+    font-weight: 600;
 }
 h3{
     font-family: 'Radley';
@@ -296,6 +297,21 @@ p{
     align-items: center;
     justify-content: space-around;
     padding: 20px 40px 50px 40px;
+    position: relative;
+}
+.shadow{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: contain;
+    box-shadow: none !important;
+}
+.shadow2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
 }
 .about-title{
     align-self: flex-start;
@@ -308,13 +324,13 @@ p{
     text-shadow: 2px 2px 6px rgba(141, 107, 84, 0.3);
 }
 .about-card-container{ 
-    width: 100%;
+    width: 85%;
     height: 60%;
-    gap: 40px;  
+    gap: 50px;  
 }
 .about-card{
     position: relative;
-    background: transparent;
+    background: rgba(245, 236, 226, 0.5);
     border: 1px solid var(--p-color);
     padding: 10px 20px 10px 20px;
     border-radius: 200px 200px 0 0 ;
@@ -322,13 +338,15 @@ p{
     opacity: 0;
     transform: translateY(-30px);
     transition: opacity 0.5s ease, transform 0.8s ease;
-    width: 33%;
+    width: 30%;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 .about-card h3{
     position: absolute;
     bottom: 0;
-    font-size: 25px;
+    font-size: 28px;
     color: var(--p-color);
     margin-bottom: 20px;
 }
@@ -348,7 +366,7 @@ p{
 }
 .about-card-hover p{
     color: var(--text-color);
-    font-size: 30px;
+    font-size: 28px;
     font-style: italic;
 }
 .about-card:hover .about-card-hover {
@@ -377,6 +395,7 @@ p{
     .about-card-container {
         flex-direction: column;
         height: 100%;
+        width: 100%;
         align-items: center;
         padding: 50px 0px 50px 0px;
     }
@@ -416,6 +435,12 @@ p{
     }
     .about-card{
         height: 300px;
+        width: 90%;
+    }
+    .shadow{
+        width: 90%;
+    }
+    .shadow2{
         width: 90%;
     }
 }
