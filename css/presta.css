@@ -60,32 +60,76 @@
 	width: 660px;
 	height: 700px;
 	border-radius: 16px;
-	background-image: url(../img/forfaits.png);
+	background-image: url(../img/formule-background.png);
     background-repeat: no-repeat;
     background-size: cover;
 	position: relative;
-    padding: 20px;
+    padding: 48px 20px 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 }
 #close-modale{
     border: none;
     position: absolute;
     top: 2%;
     right: 3%;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: var(--p-color);
+    background-color: transparent;
     color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+#close-modale i{
+    font-size: 28px;
+}
 #close-modale:hover{
-    background-color: var(--secondary-color);
+    color: var(--p-color);
+}
+.modale-container{
+    background-color: rgba(141, 107, 84, 0.65);
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 10px 30px;
+}
+.logoModale{
+    width: 80px;
+}
+.modale-title{
+    gap: 50px;
+}
+.modale-title h2{
+    font-family: 'Seasons';
+    font-size: 55px;
+    color: var(--primary-color);
+    margin-bottom: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.modale-head p{
+    font-family: 'Radley';
+    font-size: 28px;
+    color: var(--primary-color);
+}
+.formules{
+    gap: 35px;
+    width: 100%;
+}
+.pack{
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.pack p{
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
 }
 .btn-contact-modale{
     cursor: pointer;
@@ -97,7 +141,6 @@
     font-weight: 600;
     border: 1px solid var(--text-color);
     border-radius: 16px;
-    margin-bottom: 40px;
     padding: 5px 15px 5px 15px;
     box-shadow: inset 0 0 0 0 var(--background-color);
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -106,24 +149,71 @@
     color: var(--text-color);
     box-shadow: inset 200px 0 0 0 var(--background-color);
 }
+@media (max-width: 768px){
+    .modale-content{
+        width: 540px;
+        height: 600px;
+    }
+    .logoModale{
+        width: 70px;
+    }
+    .modale-title h2{
+        font-size: 42px;
+    }
+    .modale-head p{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    .formules{
+        gap: 20px;
+    }
+    .pack p{
+        font-size: 18px;
+    }
+    .btn-contact-modale{
+        font-size: 18px;
+    }
+    #close-modale i{
+        font-size: 24px;
+    }
+}
+
 @media (max-width: 575px){
     .modale-content{
-        background-image: url(../img/formules-mobile.png);
-        background-size: cover;
-        width: 300px;
-        height: 400px;
+        width: 330px;
+        height: 430px;
+        padding: 30px 15px 15px 15px;
+    }
+    .modale-container{
+        padding: 10px;
     }
     .btn-contact-modale{
         font-size: 12px;
-        margin-bottom: 15px;
-    }
-    #close-modale{
-        width: 20px;
-        height: 20px;
-        padding: 0;
     }
     #close-modale i{
-        font-size: 15px;
+        font-size: 20px;
+    }
+    .logoModale{
+        width: 40px;
+    }
+    .modale-title{
+        gap: 30px;
+    }
+    .modale-title h2{
+        font-size: 30px;
+    }
+    .modale-head p{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .formules{
+        gap: 15px;
+    }
+    .pack{
+        padding: 8px 12px 8px 12px;gaa
+    }
+    .pack p{
+        font-size: 14px;
     }
 }
 
