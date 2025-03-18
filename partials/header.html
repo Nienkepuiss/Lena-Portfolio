@@ -1,26 +1,53 @@
 <section id="header1">
-    <div class="menu d-flex justify-content-between align-items-center fixed-top"> 
-       <div class="logo-container">
-          <a class="logo-lena" href="index.html"><img src="img/logo/LPlogo.PNG"></a>
-       </div>
-       <button id="menu-toggle" aria-label="Toggle navigation">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-       <ul class="nav"> 
-        <li class="nav-item">
-           <a class="nav-link" href="index.html">Accueil</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="about.html">À propos</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link" href="presta.html">Prestations</a>
-         </li>
-         <li class="nav-item">
-          <a class="nav-link btn-contact" href="mailto:lenapuissesseau@gmail.com">✉️ Contact</a>
-          </li>
-       </ul>
-     </div>
-</section> 
+  <div class="menu d-flex justify-content-between align-items-center fixed-top">
+    <!-- Navigation gauche -->
+    <ul class="nav nav-left">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">À propos</a>
+      </li>
+    </ul>
+    
+    <!-- Logo au centre -->
+    <div class="logo-container d-flex">
+      <a class="logo-lena" href="index.html"><img src="img/logo/LPlogo.PNG"></a>
+    </div>
+    
+    <!-- Navigation droite -->
+    <ul class="nav nav-right">
+      <li class="nav-item">
+        <a class="nav-link" href="presta.html">Prestations</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mailto:lenapuissesseau@gmail.com">Contact</a>
+      </li>
+    </ul>
+    
+    <!-- Bouton hamburger (caché en mode desktop) -->
+    <button id="menu-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+  
+  <!-- Menu mobile (caché par défaut) -->
+  <div class="mobile-nav">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <a class="mobile-nav-link" href="index.html">Accueil</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a class="mobile-nav-link" href="about.html">À propos</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a class="mobile-nav-link" href="presta.html">Prestations</a>
+      </li>
+      <li class="mobile-nav-item">
+        <a class="mobile-nav-link" href="mailto:lenapuissesseau@gmail.com">Contact</a>
+      </li>
+    </ul>
+  </div>
+</section>
