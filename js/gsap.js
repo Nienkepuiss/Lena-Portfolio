@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
-
 const textElements = document.querySelectorAll("#typewriter");
 
 textElements.forEach((textElement, index) => {
