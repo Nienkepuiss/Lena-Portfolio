@@ -229,10 +229,10 @@ p{
 
 @media (max-width: 1025px){
     .banner-content h1{
-        font-size: 65px;
+        font-size: 50px;
     }
     .presta-btn{
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 
@@ -241,10 +241,10 @@ p{
         margin-top: -90px;
     }
     .banner-content h1{
-        font-size: 55px;
+        font-size: 45px;
     }
     .presta-btn{
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -255,7 +255,6 @@ p{
     }
     .presta-btn{
         margin-top: 15px;
-        font-size: 12px;
     }
 }
 /* SCROLL BANNER */
@@ -267,17 +266,31 @@ p{
 .scroll-banner-img{
     width: 55px;
 }
+.scroll-banner-mobile{
+    display: none !important;
+    background-color: var(--background-color);
+}
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
     .scroll-banner-img{
-        width: 50px;
-        height: 50px;
+        width: 40px;
     }
+}
+@media (max-width: 768px){
+   .scroll-banner{
+    display: none !important;
+   }
+   .scroll-banner-mobile{
+    display: flex !important;
+    padding: 10px;
+   }
+   .scroll-banner-img{
+    width: 45px;
+   }
 }
 @media (max-width: 575px){
     .scroll-banner-img{
-        width: 40px;
-        height: 40px;
+        width: 35px;
     }
 }
 
@@ -342,6 +355,18 @@ p{
     color: var(--secondary-color);
     margin-bottom: 0;
     font-style: italic;
+}
+
+@media (max-width: 1250px){
+    .about-content h2{
+        font-size: 25px;
+    }
+    .about-content p{
+        font-size: 14px;
+    }
+    .about-btn{
+        font-size: 13px;
+    }
 }
 
 /* SERVICES */
@@ -576,8 +601,9 @@ p{
     background-image: url('../img/background/contact-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding: 6% 3% 8% 3%;
-    height: 70vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
